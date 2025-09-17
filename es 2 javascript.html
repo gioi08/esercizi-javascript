@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, inital-scale=1,0">
+        <title>Esempio Javascript</title>
+        <style>
+            .hidden{
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <p id="messaggio">Questo è un messaggio che può essere nascosto</p>
+        <button onclick="toggleVisibilità()">Mostra/nascondi messaggio</button>
+        <script>
+            function toggleVisibilità(){
+                var messaggio = document.getElementById("messaggio");
+                messaggio.classList.toggle("hidden");
+            }
+            /*
+            Spiegazione del codice
+            HTML di base:
+            Un paragrafo <p> con l'd "messaggio".
+            Un pulsante <button> che, quando cliccato, eseguirà la fuznione toggleVisiblità().
+            CSS:
+            La classe .hidden nasconde l'elemento acclicandogli display:none.
+            Javascript:
+            La funzione toggleVisiblità() recupera l'elemento <p> usando document.getElementById("messaggio").
+            Una classList.toggle per aggiungere o rimuovere la classe hidden, nascondendo o mostrando l'elemento.
+            */
+        </script>
+    </body>
+</html>

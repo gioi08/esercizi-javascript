@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="ITF-8">
+        <meta name="viewport" content="width=device-width, inital-scale=1,0">
+        <title>Esempio Javascript</title>
+        <style>
+            .highlight{
+                color:red;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="titolo">Ciao, Mondo!</h1>
+        <button onclick="cambiaTesto()">Cliccami!</button>
+        <script>
+            function cambiaTesto(){
+                var titolo=document.getElementById("titolo");
+                titolo.textContent="Testo cambiato!";
+                titolo.classList.add("highlight");
+            }
+        /*
+        Spiegazione del codice
+        -HTML di base:
+        Abbiamo un elemento <h1> con l'id "titolo" che contiene il testo "Ciao, Mondo!".
+        Un pulsante <button> che, quando cliccato, eseguirà la funzione cambiaTesto().
+        -CSS:
+        La classe .highlight definisce uno stile con il testo rosso e in grassetto.
+        -Javascript:
+        Il nostro script Javascript è inserito tra i tag <script> all'interno del <body>.
+        La funzione cambiaTesto() viene eseguita quando il pulsante viene cliccato.
+        La funzione recupera l'elemento <h1> usando document.getElementId("titolo").
+        Cambia il contenuto dell'elemento <h1> usando textContent.
+        Aggiunge la classe highlight all'elemento <h1> usando classList.add.
+        */
+        </script>
+    </body>
+</html>

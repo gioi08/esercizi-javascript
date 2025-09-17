@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, inital-scale=1,0">
+        <title>Esempio Javascript</title>
+    </head>
+    <body>
+        <ul id="lista">
+            <li>elemento 1</li>
+            <li>elemento 2</li>
+        </ul>
+        <button onclick="aggiungiElemento()">Aggiungi Elemento</button>
+        <script>
+            function aggiungiElemento(){
+                var lista = document.getElementById("lista");
+                var nuovoElemento = document.createElement("li");
+                nuovoElemento.textContent="Nuovo elemento";
+                lista.appendChild(nuovoElemento);
+            }
+        </script>
+    </body>
+</html>
