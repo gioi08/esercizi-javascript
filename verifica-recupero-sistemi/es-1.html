@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Verifica di recupero</title>
+    </head>
+    <body>
+        <h1>Apri la console</h1>
+        <script>
+            function aggiornaPortafoglio(){
+                var tot=arguments[1];
+                for(let i=2;i<arguments.length;i++){
+                    var cont=i-1;
+                    if(arguments[0]=='+'){
+                        tot+=arguments[i];
+                        console.log("i soldi nel portafoglio dopo la "+cont+"° operazione sono: "+tot);
+                    }else if(arguments[0]=='-'){
+                        tot-=arguments[i];
+                        if(tot<0){
+                            console.log("soldi finiti");
+                            break;
+                        }else{
+                            console.log("i soldi nel portafoglio dopo la "+cont+"° operazione sono: "+tot);
+                        }    
+                    }
+                }
+                
+                return tot;
+            }
+
+            var portafoglio=Number(prompt("inserisci i soldi contenuti nel portafoglio: "));
+            console.log("somma")
+            portafoglio=aggiornaPortafoglio('+',portafoglio,70,60,90);
+            console.log("sottrazione");
+            portafoglio=aggiornaPortafoglio('-',portafoglio,90,100,80);
+
+        </script>
+    </body>
+</html>

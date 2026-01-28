@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Verifica di recupero</title>
+    </head>
+    <body>
+        <h1>Apri la console</h1>
+        <script>
+            var contatori=[];
+            var n=Number(prompt("quanti contatori vuoi inserire?"));
+            for(let i=0;i<n;i++){
+                let cC=prompt("inserisci codice del cliente");
+                let t=Number(prompt("inserisci tariffa"));
+                let n2=Number(prompt("inserisci numero di letture che vuoi inserire"));
+                var lt=[];
+                for(let j=0;j<n2;j++){
+                    let cont=j+1;
+                    let l=Number(prompt("inserisci lettura n° "+cont));
+                    lt.push(l);
+                }
+                var aggiunta={codiceCliente:cC, tariffa:t,letture:lt};
+                contatori.push(aggiunta);
+            }
+            var cerca=prompt("inserisci il codice dell'utente di cui vuoi calcolare il consumo");
+            var trovato=false;
+            for(let i=0;i<contatori.length;i++){
+                if(cerca==contatori[i].codiceCliente){
+                    var sommaCliente=calcolaConsumo(contatori[i].tariffa,...contatori[i].letture);
+                    console.log("Cliente: "+contatori[i].codiceCliente);
+                    console.log("Totale dovuto: "+sommaCliente);
+                    trovato=true;
+                }
+            }
+            if(trovato=false){
+                console.log("utente non trovato");
+            }
+
+
+            function calcolaConsumo(tariffa,...letture){
+               somma=tariffa;
+               for(let i=0;i<letture.length;i++){
+                somma+=letture[i];
+               }
+               return somma;
+            }
+        </script>
+    </body>
+</html>
